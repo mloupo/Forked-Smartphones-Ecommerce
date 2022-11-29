@@ -1,0 +1,359 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    background: #fcfcfc;
+}
+
+
+/* CONTAINER */
+
+a {
+    text-decoration: none; 
+    color: #fff;   
+}
+
+a:hover {
+    color: #313de4;;
+}
+
+.container h3 {
+    font-size: 1.7rem;
+}
+
+.products_container, .aside_container, 
+.articles_container, .brands_container {
+    margin: 2rem 0.5rem 0.6rem 0.5rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: auto;
+    grid-template-areas: "header_container   header_container"
+                         "nav_container      nav_container"
+                         "slider_container slider_container"
+                         "products_container aside_container"
+                         "accessory_container aside_container"
+                         "articles_container aside_container"
+                         "brands_container   aside_container"
+                         "footer_container   footer_container";
+}
+
+/* HEADER */
+
+.header_container {
+    background: #2c2fcc;
+    color: #fff;
+    grid-area: header_container;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 1rem 5rem;
+}
+
+.header_container h2 {
+    text-align: center;
+}
+
+.header_container a {
+    color: #fff;
+}
+
+/* NAVEGATION BAR */
+
+.nav_bar_container {
+    background: #1a1a1a;
+    color: #fff;
+    grid-area: nav_container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_bar_container ul li {
+    display: inline-block;
+    border-right: 0.1rem solid rgba(0, 0, 0, 0.26);
+    padding: 1rem 2rem;
+}
+
+.nav_bar_container .user_login {
+    padding-right: 2rem;
+}
+
+.menu_toggle {
+    display: none;
+    font-size: 1.5rem;
+}
+
+.show {
+    height: 305px !important;
+}
+
+/* PRODUCT CONTAINER */
+
+.products_container {
+    grid-area: products_container;
+}
+
+.product_card {
+    width: 10rem;
+    margin: 0.4rem;
+    cursor: auto;
+}
+
+.product_cards_container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.products_container img {
+    width: 100%;
+}
+
+.product_card .btn_product {
+    background: #2c2fcc;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.product_card:hover > .btn_product {
+    opacity: 80%;
+}
+
+.product_card:hover a {
+    color: #fff;
+}
+
+/* ACCESORIES CONTAINER */
+
+.accessory_container {
+    grid-area: accessory_container;
+}
+
+/* ASIDE CONTAINER */
+
+.aside_container {
+    grid-area: aside_container;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+}
+
+.aside_container a {
+    color: #000;
+}
+
+.aside_container article figure div {
+    width: 10rem;
+    float: right;
+}
+
+.aside_container article {
+    border-bottom: 0.1rem solid #666;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.aside_container article h2{
+    margin-bottom: 0.3rem;
+    font-weight: 550;
+}
+
+.img_aside{
+    width: 100%;  
+}
+
+.aside_container article:hover {
+    opacity: 80%;
+}
+
+/* ARTICLES CONTAINER */
+
+.articles_container {
+    grid-area: articles_container;
+}
+
+.article_cards_container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+} 
+
+.articles_container .article_card {
+    background: #fff;
+    width: 16rem;
+    margin: 0.5rem;
+}
+
+.article_card:hover {
+    opacity: 80%;
+} 
+
+.articles_container a {
+    color: #000;
+}
+
+.articles_container .article_card img {
+    width: 100%;
+}
+
+/* BRANDS CONTAINER */
+
+.brands_container {
+    background: #fff;
+    grid-area: brands_container;
+}
+
+.brand_cards_container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.brands_container .brand_cards_container div:hover {
+    opacity: 80%;
+} 
+
+.brands_container .brand_cards_container div {
+    width: 20rem;
+}
+
+.brands_container .brand_cards_container img {
+    width: 100%;
+}
+
+/* FOOTER CONTAINER */
+
+.footer_container {
+    background: #2c2fcc;
+    color: #fff;
+    grid-area: footer_container;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.footer_container div a{
+    display: block;
+}
+
+.footer_container div a:hover{
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 800px) {
+    
+    .menu_toggle {
+        display: block;
+        margin-left: 15rem;
+    }
+
+    #menu {
+        background: #000;
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: .3s ease-out;
+    }
+
+    #menu ul li {
+        display: block;
+        text-align: center;
+    }
+
+    #menu ul li a {
+        border-bottom: 1px solid white;
+        padding: 1rem 0;
+        font-size: 20px;
+        width: 100%;
+        
+    }
+    
+    /*.menu_toggle {
+        display: block;
+        padding: 0 2rem;
+    }
+
+    .nav_bar_container {
+        justify-content: center;
+    }
+
+    #menu {
+        background: violet;
+        position: absolute;
+        top: 3.75rem;
+        left: 0;
+        width: 100%;
+        height: 0;
+        border: 0.1rem;
+        overflow: hidden;
+    }*/
+
+    .container {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:"header_container"
+                            "nav_container"
+                            "slider_container "
+                            "products_container"
+                            "accessory_container"
+                            "aside_container"
+                            "articles_container"
+                            "brands_container"
+                            "footer_container";
+    }
+
+    .products_container h3 {
+        text-align: center;
+    }
+
+    .product_cards_container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+    }
+
+    .product_card {
+        width: 12rem;
+    }
+
+    .aside_container {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .aside_container article figure div {
+        width: 10rem;
+        float: none;
+        margin: auto;
+    }
+    
+    .container h3 {
+        text-align: center;
+    }
+    
+    .article_cards_container {
+        justify-content: center;
+    } 
+
+    .brand_cards_container {
+        justify-content: center;
+    }
+}   
+

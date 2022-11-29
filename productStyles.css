@@ -1,0 +1,101 @@
+/* CONTAINER */
+
+.product_page_container {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: auto;
+    grid-template-areas: "header_container   header_container"
+                         "nav_container      nav_container"
+                         "product_page       product_page"
+                         "products_container aside_container"
+                         "accessory_container aside_container"
+                         "articles_container aside_container"
+                         "brands_container   aside_container"
+                         "footer_container   footer_container";
+}
+
+/* CARD PAGE */
+
+.product_page {
+    margin: 4rem 0;
+    grid-area: product_page;
+}
+
+.card_page {
+    display: flex;
+    justify-content: space-around;
+}
+
+.product_img {
+    flex-basis: 60%;
+    max-width: 30rem;
+}
+
+.product_img img {
+    width: 100%;
+}
+
+.product_title {
+    font-size: 3rem;
+    margin-bottom: 0.3rem;
+}
+
+.product_price {
+    color: #666;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+.product_color {
+    margin: 0.1rem 1rem 1rem 0;
+}
+
+.product_color span {
+    font-weight: bolder;
+    color: #000;
+}
+
+.product_description {
+    flex-basis: 40%;
+    max-width: 30rem;
+    color: rgb(22, 22, 22);
+}
+
+.btn_buy_container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.buy_btn {
+    background: #2c2fcc;
+    color: #fff;
+    cursor: pointer;
+    width: 70%;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
+/* HOVER CARD PRODUCT */
+
+.btn_buy_container p:hover {
+    opacity: 80%;
+}
+
+@media only screen and (max-width: 800px) {
+    
+}
+.product_page_container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: "header_container"
+                         "nav_container"
+                         "product_page"
+                         "products_container"
+                         "aside_container"
+                         "accessory_container"
+                         "articles_container"
+                         "brands_container"
+                         "footer_container";
+}
